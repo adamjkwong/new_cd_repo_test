@@ -1,0 +1,61 @@
+(base) ➜  ~ git:(master) ✗ cd desktop
+(base) ➜  desktop git:(main) ✗ mkdir test
+(base) ➜  desktop git:(main) ✗ cd test
+(base) ➜  test git:(main) ✗ touch index.html
+(base) ➜  test git:(main) ✗ touch styles.css
+(base) ➜  test git:(main) ✗ vim index.html
+(base) ➜  test git:(main) ✗ git init
+Initialized empty Git repository in /Users/adamwong/Desktop/test/.git/
+(base) ➜  test git:(master) ✗ git commit -m "first html commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+(base) ➜  test git:(master) ✗ git add .
+(base) ➜  test git:(master) ✗ git commit -m "first html commit"
+[master (root-commit) 171d0da] first html commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+(base) ➜  test git:(master) git branch -M main
+(base) ➜  test git:(main) git remote add origin https://github.com/adamjkwong/new_cd_repo_test.git
+(base) ➜  test git:(main) git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 268 bytes | 268.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/adamjkwong/new_cd_repo_test.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) ➜  test git:(main) vim styles.css
+(base) ➜  test git:(main) ✗ git add .
+(base) ➜  test git:(main) ✗ git commit -m "second commit, for css"
+[main ec2a153] second commit, for css
+ 1 file changed, 1 insertion(+)
+(base) ➜  test git:(main) git branch -M man
+(base) ➜  test git:(man) gt push -u origin main
+zsh: command not found: gt
+(base) ➜  test git:(man) git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/adamjkwong/new_cd_repo_test.git'
+(base) ➜  test git:(man) git branch -M main     
+(base) ➜  test git:(main) git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/adamjkwong/new_cd_repo_test.git
+   171d0da..ec2a153  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) ➜  test git:(main) ls
+index.html styles.css
+
